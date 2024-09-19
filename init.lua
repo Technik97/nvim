@@ -21,28 +21,30 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+          "nvim-lua/plenary.nvim",
+          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+          "MunifTanjim/nui.nvim",
+          -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        }
     },
-{
-    'shaunsingh/nord.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-	vim.g.nord_contrast = true
-	vim.g.nord_borders = false
-	vim.g.nord_disable_background = false
-	vim.g.nord_italic = false
-	vim.g.nord_uniform_diff_background = true
-	vim.g.nord_bold = false
+    {
+	'shaunsingh/nord.nvim',
+	lazy = false,
+	priority = 1000,
+	config = function()
+            vim.g.nord_contrast = true
+            vim.g.nord_borders = false
+            vim.g.nord_disable_background = false
+            vim.g.nord_italic = false
+            vim.g.nord_uniform_diff_background = true
+            vim.g.nord_bold = false
 
-	require('nord').set()
-    end 
-}
-}
-)
+
+            require('nord').set()
+	end 
+    }
+})
