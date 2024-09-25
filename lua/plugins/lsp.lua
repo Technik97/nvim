@@ -135,6 +135,17 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
+      rust_analyzer = {
+        ['rust-analyzer'] = {
+          cargo = {
+            features = 'all',
+          },
+          checkOnSave = true,
+          check = {
+            command = 'clippy',
+          },
+        },
+      },
     }
 
     -- Ensure the servers and tools above are installed
