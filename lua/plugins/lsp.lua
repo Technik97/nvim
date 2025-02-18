@@ -145,6 +145,16 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
+      fsautocomplete = {
+        cmd = { "fsautocomplete" },
+        filetypes = { "fsharp" },
+        root_dir = require('lspconfig.util').root_pattern("*.fsproj", ".git"),
+        settings = {
+          FSharp = {
+            automaticWorkspaceInit = true,
+          },
+        },
+      },
     }
 
     -- Ensure the servers and tools above are installed
